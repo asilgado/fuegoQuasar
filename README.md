@@ -1,6 +1,6 @@
 PASOS PARA EJECUTAR EL PROGRAMA: 
 
-Preferiblementes utilizar un ide con intellij o eclipse
+Preferiblementes utilizar un ide como intellij o eclipse
 
 1. git clone git@github.com:asilgado/fuegoQuasar.git
 2. configurar variable de entorno JAVA_HOME
