@@ -35,7 +35,7 @@ public class FuegoQuasarController {
     public ResponseEntity<Response> topSecret(@Valid @RequestBody Request request) {
         Response response = null;
         try {
-            response = fuegoQuasarService.topSeretService(request.getSatellites());
+            response = fuegoQuasarService.topSecretService(request.getSatellites());
         } catch (FuegoQuasarException fuegoQuasarException) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }

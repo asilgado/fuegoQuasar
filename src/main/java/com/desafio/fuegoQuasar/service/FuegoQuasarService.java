@@ -6,7 +6,7 @@ import com.desafio.fuegoQuasar.model.Satellite;
 import java.util.List;
 
 public interface FuegoQuasarService {
-    Response topSeretService(List<Satellite> satellites);
+    Response topSecretService(List<Satellite> satellites);
     void topSecretSplitService(Satellite satellite, String satelliteName);
     Response topSeretService();
 }

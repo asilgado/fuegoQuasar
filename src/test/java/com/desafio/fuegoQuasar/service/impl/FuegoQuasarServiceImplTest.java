@@ -26,20 +26,20 @@ class FuegoQuasarServiceImplTest {
 
     @Test
     void topSeretServiceWhenListIsEmpty() {
-        Exception exception = assertThrows(FuegoQuasarException.class, () -> fuegoQuasarService.topSeretService(Collections.emptyList()));
+        Exception exception = assertThrows(FuegoQuasarException.class, () -> fuegoQuasarService.topSecretService(Collections.emptyList()));
         assertTrue(exception.getMessage().contains(POSITION_ERROR));
     }
 
     @Test
     void topSeretServiceWhenCicleNotIntercept() {
-        Exception exception = assertThrows(FuegoQuasarException.class, () -> fuegoQuasarService.topSeretService(TestObjectFactory.buildSatelliteListDistanceError()));
+        Exception exception = assertThrows(FuegoQuasarException.class, () -> fuegoQuasarService.topSecretService(TestObjectFactory.buildSatelliteListDistanceError()));
         assertTrue(exception.getMessage().contains(POSITION_ERROR));
     }
 
 
     @Test
     void topSeretService() {
-        Response response = fuegoQuasarService.topSeretService(TestObjectFactory.buildSatelliteList());
+        Response response = fuegoQuasarService.topSecretService(TestObjectFactory.buildSatelliteList());
         assertEquals(-100, (int) response.getPosition().getX());
         assertEquals(75, (int) response.getPosition().getY());
         assertEquals(FINAL_MESSAGE, response.getMessage());
@@ -48,14 +48,14 @@ class FuegoQuasarServiceImplTest {
     @Test
     void topSeretServiceWhenListMessageIsEmpty() {
         Exception exception = assertThrows(FuegoQuasarException.class, () ->
-                fuegoQuasarService.topSeretService(TestObjectFactory.buildSatelliteListMessageEmpty()));
+                fuegoQuasarService.topSecretService(TestObjectFactory.buildSatelliteListMessageEmpty()));
         assertTrue(exception.getMessage().contains(MESSAGE_ERROR));
     }
 
     @Test
     void topSeretServiceWhenListMessageIsNoEquals() {
         Exception exception = assertThrows(FuegoQuasarException.class, () ->
-                fuegoQuasarService.topSeretService(TestObjectFactory.buildSatelliteListMessageSizeError()));
+                fuegoQuasarService.topSecretService(TestObjectFactory.buildSatelliteListMessageSizeError()));
         assertTrue(exception.getMessage().contains(MESSAGE_ERROR));
     }
 

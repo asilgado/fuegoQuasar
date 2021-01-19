@@ -44,7 +44,7 @@ public class FuegoQuasarServiceImpl implements FuegoQuasarService {
 
 
     @Override
-    public Response topSeretService(List<Satellite> satellites) {
+    public Response topSecretService(List<Satellite> satellites) {
         if (CollectionUtils.isEmpty(satellites) || satellites.size() != NUMBER_SATELLITES_IN_SERVICE) {
             throw new FuegoQuasarException(POSITION_ERROR);
         }
@@ -175,7 +175,7 @@ public class FuegoQuasarServiceImpl implements FuegoQuasarService {
 
     @Override
     public Response topSeretService() {
-        Response response = this.topSeretService(queue);
+        Response response = this.topSecretService(queue);
         //Si no hubo errores limpiar cola
         queue.clear();
         return response;
