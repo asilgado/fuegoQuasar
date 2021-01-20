@@ -38,5 +38,7 @@ POST https://operacion-fuego-quasar.herokuapp.com/api/v1/fuegoQuasar/topsecret_s
 	"message": ["este", "", "un", "", ""]
 }
 
+ejemplo: https://operacion-fuego-quasar.herokuapp.com/api/v1/fuegoQuasar/topsecret_split/kenobi
+
 NIVEL 3
 GET https://operacion-fuego-quasar.herokuapp.com/api/v1/fuegoQuasar/topsecret_split
